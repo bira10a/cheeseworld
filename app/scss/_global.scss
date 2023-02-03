@@ -9,10 +9,10 @@ $minWidth: 320;
 // Ширина полотна (макета)
 $maxWidth: 1920;
 // Ширина ограничивающего контейнера (0 = нет ограничения)
-$maxWidthContainer: 1170;
+$maxWidthContainer: 1600;
 // Общий отступ у контейнера
 // (30 = по 15px слева и справа, 0 = нет отступа)
-$containerPadding: 30;
+$containerPadding: 80;
 
 // Ширина срабатывания первого брейкпоинта
 $containerWidth: $maxWidthContainer + $containerPadding;
@@ -42,7 +42,7 @@ $responsiveType: 1;
   [class*="__container"] {
     @if ($maxWidthContainer>0) {
       max-width: rem($maxWidthContainer);
-      box-sizing: content-box;
+      box-sizing: border-box;
       margin: 0 auto;
     }
 
