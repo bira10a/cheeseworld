@@ -1,0 +1,36 @@
+.top-brends {
+  padding: 120px 0;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 48%;
+    padding: 30px 10px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__logo {
+    margin-bottom: 30px;
+  }
+
+  &__text {
+    max-width: 300px;
+    margin-bottom: 15px;
+  }
+
+}

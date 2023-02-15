@@ -1,0 +1,19 @@
+.assortment {
+  padding: 40px 0;
+  text-align: center;
+  overflow: hidden;
+
+  &__title {
+    font-size: 40px;
+    margin: 50px 0;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    margin: 50px 0;
+    width: 2500px;
+  }
+
+}

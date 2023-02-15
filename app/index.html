@@ -5,78 +5,287 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title></title>
+
+  <script src="libs/gsap/gsap.min.js" defer></script>
+  <script src="libs/gsap/ScrollTrigger.min.js" defer></script>
+  <script src="libs/gsap/ScrollSmoother.min.js" defer></script>
+  <script src="js/main.min.js" defer></script>
+
   <link rel="icon" href="images/favicon.png" sizes="16x16, 32x32, 48x48" type="image/x-icon">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
 
-  <header class="header">
-    <div class="header__container">
-      <nav class="header__nav header-nav">
-        <a class="header__profile" href="#" aria-label="переход в личный кабинет" title="личный кабинет"></a>
+  <div class="wrapper">
+    <div class="content">
 
-        <button class="header__burger burger" type="button">
-          <span class="burger__line"></span>
-          <span class="sr-only">Открыть меню</span>
-        </button>
-
-        <ul class="header-nav__menu">
-          <li class="header-nav__item">
-            <a class="header-nav__link" href="#">О заводе</a>
-            <ul class="header-nav__menu-list">
-              <li class="header-nav__menu-item">
-                <a class="header-nav__menu-link" href="#">Общая информация</a>
+      <header class="header">
+        <div class="header__container">
+          <nav class="header__nav header-nav">
+            <a class="header__profile" href="#" aria-label="переход в личный кабинет" title="личный кабинет"></a>
+    
+            <button class="header__burger burger" type="button">
+              <span class="burger__line"></span>
+              <span class="sr-only">Открыть меню</span>
+            </button>
+    
+            <div class="header-nav__inner">
+              <ul class="header-nav__menu">
+                <li class="header-nav__item">
+                  <a class="header-nav__link" href="#">О заводе</a>
+                  
+                  <ul class="header-nav__menu-list">
+                    <li class="header-nav__menu-item">
+                      <a class="header-nav__menu-link" href="#">Общая информация</a>
+                    </li>
+                    <li class="header-nav__menu-item">
+                      <a class="header-nav__menu-link" href="#">История</a>
+                    </li>
+                    <li class="header-nav__menu-item">
+                      <a class="header-nav__menu-link" href="#">Награды</a>
+                    </li>
+                    <li class="header-nav__menu-item">
+                      <a class="header-nav__menu-link" href="#">Мы в торговых сетях</a>
+                    </li>
+                    <li class="header-nav__menu-item">
+                      <a class="header-nav__menu-link" href="#">Партнерам</a>
+                    </li>
+                  </ul>
+                </li>
+      
+                <li class="header-nav__item">
+                  <a class="header-nav__link" href="#">Каталог</a>
+      
+                  <ul class="header-nav__menu-list">
+                    <li class="header-nav__menu-item">
+                      <a class="header-nav__menu-link" href="#">Вся продукция</a>
+                    </li>
+                    <li class="header-nav__menu-item">
+                      <a class="header-nav__menu-link" href="#">Сыр</a>
+                    </li>
+                    <li class="header-nav__menu-item">
+                      <a class="header-nav__menu-link" href="#">Масло</a>
+                    </li>
+                    <li class="header-nav__menu-item">
+                      <a class="header-nav__menu-link" href="#">Цельномолочная продукция</a>
+                    </li>
+                    <li class="header-nav__menu-item">
+                      <a class="header-nav__menu-link" href="#">Сухая молочная сыворотка</a>
+                    </li>
+                  </ul>
+                </li>
+      
+                <li class="header-nav__item">
+                  <a class="header-nav__link" href="#">Бренды</a>
+    
+                  <!-- <button class="header-nav__btn" type="button" aria-label="закрыть меню">
+                    <span class="header-nav__btn-one"></span>
+                    <span class="header-nav__btn-two"></span>
+                  </button> -->
+    
+                  <ul class="header-nav__menu-brends">
+                    <li class="header-nav__menu-item">
+                      <a class="header-nav__menu-link" href="#">
+                        <img src="images/logo-brend/logo-lattesco.svg" alt="сайт партнёра-бренда Lattesco" width="90" height="80">
+                      </a>
+                    </li>
+                    <li class="header-nav__menu-item">
+                      <a class="header-nav__menu-link" href="#">
+                        <img src="images/logo-brend/logo-emandhof.svg" alt="сайт партнёра-бренда Emandhof" width="100" height="23">
+                      </a>
+                    </li>
+                    <li class="header-nav__menu-item">
+                      <a class="header-nav__menu-link" href="#">
+                        <img src="images/logo-brend/logo.svg" alt="сайт партнёра-бренда Starodub" width="100" height="58">
+                      </a>
+                    </li>
+                    <li class="header-nav__menu-item">
+                      <a class="header-nav__menu-link" href="#">
+                        <img src="images/logo-brend/logo-gutentag.svg" alt="сайт партнёра-бренда Gutentag" width="80" height="80">
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+      
+                <li class="header-nav__item">
+                  <button class="header-nav__btn" type="button" aria-label="закрыть меню">
+                    <span class="header-nav__btn-one"></span>
+                    <span class="header-nav__btn-two"></span>
+                  </button>
+                </li>
+      
+                <li class="header-nav__item">
+                  <a class="header-nav__link" href="#">Новости</a>
+                  <a class="header-nav__link" href="#">HoReCa</a>
+                  <a class="header-nav__link" href="#">Контакты</a>
+                </li>
+              </ul>
+              <div class="header-nav__borderImg" style="background-image: url('images/border-bg.png');"></div>
+            </div>
+          </nav>
+    
+          <div class="header__info">
+            <img src="images/header/logo.svg" alt="logo" loading="lazy" width="326" height="188" data-speed="1.3">
+            <h1 class="header__title" data-speed="1.5">ТнВ «Сыр Стародубский» <br>— лидер на рынке сыродельных <br>предприятий в России</h1>
+            <a class="header__info-link" href="#" aria-label="ознакомиться с продукцией" data-speed="1.2">
+              <span></span>
+            </a>
+          </div>
+        </div>
+    
+        <div class="header__images">
+          <img class="header__images-one" src="images/header/item1.png" alt="">
+          <img class="header__images-two" src="images/header/item2.png" alt="">
+          <img class="header__images-three" src="images/header/item3.png" alt="">
+          <img class="header__images-four" src="images/header/item4.png" alt="">
+          <img class="header__images-five" src="images/header/item5.png" alt="">
+          <img class="header__images-six" src="images/header/item6.png" alt="">
+          <img class="header__images-seven" src="images/header/item7.png" alt="">
+          <img class="header__images-eight" src="images/header/item8.png" alt="">
+          <img class="header__images-nine" src="images/header/item9.png" alt="">
+          <img class="header__images-ten" src="images/header/item10.png" alt="">
+          <img class="header__images-eleven" src="images/header/item11.png" alt="">
+          <img class="header__images-twelve" src="images/header/item12.png" alt="">
+          <img class="header__images-thirteen" src="images/header/item13.png" alt="">
+          <img class="header__images-fourteen" src="images/header/item14.png" alt="">
+        </div>
+      </header>
+      
+      <main class="main">
+        <!-- <h1 class="sr-only">Продуктовый интернет магазин Фрешок</h1> -->
+        <section class="top-brends">
+          <div class="top-brends__container">
+            <ul class="top-brends__list">
+              <li class="top-brends__item gallery__left">
+                <img class="top-brends__img" src="images/top-brend/starodub-product.png" alt="" width="362" height="200">
+    
+                <div class="top-brends__content">
+                  <img class="top-brends__logo" src="images/logo-brend/logo.svg" alt="" width="168" height="168">
+                  <span class="top-brends__text">
+                    Воплощение надежности,
+                    долголетия и традиций.
+                  </span>
+                  <a class="top-brends__link btn" href="" target="_blank">Подробнее</a>
+                </div>
               </li>
-              <li class="header-nav__menu-item">
-                <a class="header-nav__menu-link" href="#">История</a>
+              <li class="top-brends__item gallery__right">
+                <img class="top-brends__img" src="images/top-brend/starodub-product.png" alt="" width="362" height="200">
+    
+                <div class="top-brends__content">
+                  <img class="top-brends__logo" src="images/logo-brend/logo.svg" alt="" width="168" height="168">
+                  <span class="top-brends__text">
+                    Воплощение надежности,
+                    долголетия и традиций.
+                  </span>
+                  <a class="top-brends__link btn" href="" target="_blank">Подробнее</a>
+                </div>
               </li>
-              <li class="header-nav__menu-item">
-                <a class="header-nav__menu-link" href="#">Награды</a>
+              <li class="top-brends__item gallery__left">
+                <img class="top-brends__img" src="images/top-brend/starodub-product.png" alt="" width="362" height="200">
+    
+                <div class="top-brends__content">
+                  <img class="top-brends__logo" src="images/logo-brend/logo.svg" alt="" width="168" height="168">
+                  <span class="top-brends__text">
+                    Воплощение надежности,
+                    долголетия и традиций.
+                  </span>
+                  <a class="top-brends__link btn" href="" target="_blank">Подробнее</a>
+                </div>
               </li>
-              <li class="header-nav__menu-item">
-                <a class="header-nav__menu-link" href="#">Мы в торговых сетях</a>
+              <li class="top-brends__item gallery__right">
+                <img class="top-brends__img" src="images/top-brend/starodub-product.png" alt="" width="362" height="200">
+    
+                <div class="top-brends__content">
+                  <img class="top-brends__logo" src="images/logo-brend/logo.svg" alt="" width="168" height="168">
+                  <span class="top-brends__text">
+                    Воплощение надежности,
+                    долголетия и традиций.
+                  </span>
+                  <a class="top-brends__link btn" href="" target="_blank">Подробнее</a>
+                </div>
               </li>
-              <li class="header-nav__menu-item">
-                <a class="header-nav__menu-link" href="#">Партнерам</a>
-              </li>
+    
             </ul>
-          </li>
-        </ul>
-      </nav>
+          </div>
+        </section>
 
-      <div class="header__info">
-        <img src="images/header/logo.svg" alt="logo" loading="lazy" width="326" height="188">
-        <h1 class="header__title">ТнВ «Сыр Стародубский» <br>— лидер на рынке сыродельных <br>предприятий в России</h1>
-        <a class="header__info-link" href="#" aria-label="ознакомиться с продукцией">
-          <span></span>
-        </a>
-      </div>
-    </div>
+        <section class="assortment">
+          <h2 class="assortment__title">Широкий ассортимент вкуснейших сыров</h2>
+          <p class="assortment__text">Для создания сыра используется только отборное жирное молоко и натуральные ингредиенты. Повышенное количество
+          витаминов и аминокислот делают продукт отличным выбором.</p>
 
-    <div class="header__images">
-      <img class="header__images-one" src="images/header/item1.png" alt="">
-      <img class="header__images-two" src="images/header/item2.png" alt="">
-      <img class="header__images-three" src="images/header/item3.png" alt="">
-      <img class="header__images-four" src="images/header/item4.png" alt="">
-      <img class="header__images-five" src="images/header/item5.png" alt="">
-      <img class="header__images-six" src="images/header/item6.png" alt="">
-      <img class="header__images-seven" src="images/header/item7.png" alt="">
-      <img class="header__images-eight" src="images/header/item8.png" alt="">
-      <img class="header__images-nine" src="images/header/item9.png" alt="">
-      <img class="header__images-ten" src="images/header/item10.png" alt="">
-      <img class="header__images-eleven" src="images/header/item11.png" alt="">
-      <img class="header__images-twelve" src="images/header/item12.png" alt="">
-      <img class="header__images-thirteen" src="images/header/item13.png" alt="">
-      <img class="header__images-fourteen" src="images/header/item14.png" alt="">
+
+          <ul class="assortment__list">
+            <li class="assortment__item">
+              <img src="images/assortment/assortment.png" alt="" width="300" height="300">
+              <h4 class="assortment__name">Сыр Lattesco Mozarella per Pizza</h4>
+              <p class="assortment__text">Свежий сыр из отборного молока</p>
+            </li>
+            <li class="assortment__item">
+              <img src="images/assortment/assortment.png" alt="" width="300" height="300">
+              <h4 class="assortment__name">Сыр Lattesco Mozarella per Pizza</h4>
+              <p class="assortment__text">Свежий сыр из отборного молока</p>
+            </li>
+            <li class="assortment__item">
+              <img src="images/assortment/assortment.png" alt="" width="300" height="300">
+              <h4 class="assortment__name">Сыр Lattesco Mozarella per Pizza</h4>
+              <p class="assortment__text">Свежий сыр из отборного молока</p>
+            </li>
+            <li class="assortment__item">
+              <img src="images/assortment/assortment.png" alt="" width="300" height="300">
+              <h4 class="assortment__name">Сыр Lattesco Mozarella per Pizza</h4>
+              <p class="assortment__text">Свежий сыр из отборного молока</p>
+            </li>
+            <li class="assortment__item">
+              <img src="images/assortment/assortment.png" alt="" width="300" height="300">
+              <h4 class="assortment__name">Сыр Lattesco Mozarella per Pizza</h4>
+              <p class="assortment__text">Свежий сыр из отборного молока</p>
+            </li>
+            <li class="assortment__item">
+              <img src="images/assortment/assortment.png" alt="" width="300" height="300">
+              <h4 class="assortment__name">Сыр Lattesco Mozarella per Pizza</h4>
+              <p class="assortment__text">Свежий сыр из отборного молока</p>
+            </li>
+          </ul>
+        </section>
+
+        <section class="about-us">
+          <div class="about-us__container">
+            <div class="about-us__top">
+              <div class="about-us__content">
+                <h2 class="about-us__title">О заводе</h2>
+                <p class="about-us__info">ТнВ «Сыр Стародубский» - одно из крупнейших сыродельных предприятий, занимающее 1 место в России по объему производства
+                полутвердых сыров.</p>
+                <p class="about-us__text">Основные принципы руководства компании: профессионализм, качество и добросовестность во всем. Именно эти качества -
+                честность перед собой и перед партнерами, умение дорожить именем своей компании, помогают всему коллективу производить
+                продукцию высокого качества, что не раз подтверждалось высокими наградами.</p>
+              </div>
+
+              <img src="images/about-us/about-one.jpg" alt="">
+            </div>
+
+            <div class="about-us__bottom">
+              <img src="images/about-us/about-two.jpg" alt="">
+
+              <div class="about-us__content">
+                <p class="about-us__info">Высокое качество продукции обуславливается работой профессионалов на каждом этапе.</p>
+                <p class="about-us__text">Основные принципы руководства компании: профессионализм, качество и добросовестность во всем. Именно эти качества -
+                честность перед собой и перед партнерами, умение дорожить именем своей компании, помогают всему коллективу производить
+                продукцию высокого качества, что не раз подтверждалось высокими наградами. Большинство сотрудников трудится на
+                предприятии со дня основания производства. Результаты упорного и целенаправленного труда всего коллектива были оценены
+                по достоинству, о чем свидетельствуют многочисленные дипломы и медали.</p>
+              </div>              
+            </div>
+
+          </div>
+        </section>
+      </main>
+
     </div>
-  </header>
-  
-  <main class="main">
-    <!-- <h1 class="sr-only">Продуктовый интернет магазин Фрешок</h1> -->
-  </main>
+  </div>
 
   <footer class="footer">
   </footer>
-  <script src="js/main.min.js"></script>
+  <!-- <script src="js/main.min.js"></script> -->
 </body>
 </html>
