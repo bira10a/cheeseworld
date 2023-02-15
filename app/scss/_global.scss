@@ -93,9 +93,17 @@ body {
   font-size: 16px;
   line-height: 1.4;
   color: $default;
-  background-color: #000000;
+  color: #333;
+  // background-color: #fff;
+  // background-color: #fff0bd;
+  background-color: #fff;
   display: flex;
   flex-direction: column;
+
+  &.black {
+    background-color: #333;
+    color: #fff0bd;
+  }
 }
 
 // .body--hidden {
