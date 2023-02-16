@@ -9,7 +9,6 @@ const burger = document.querySelector('.burger'),
 burger.addEventListener('click', () => {
   headerMenu.classList.add('header-nav__inner--active');
 
-  body.classList.toggle('black');
 
   // setTimeout(() => {
   //   btnCloseMemuLineOne.style.animation = 'btnLineOn 1s linear forwards';
@@ -36,6 +35,21 @@ btnCloseMemu.addEventListener('click', () => {
     })
   }, 2000);
 });
+
+/////////////////////////////////////////
+const headerCheckbox = document.querySelector('.header__input');
+
+headerCheckbox.addEventListener('change', () => {
+  if (headerCheckbox.checked) {
+    body.classList.add('black-theme');
+  } else {
+    body.classList.remove('black-theme');
+  }
+
+})
+
+
+
 
 ///////////////////////////////////////// GSAP
 
