@@ -4,8 +4,15 @@
   overflow: hidden;
 
   &__title {
-    font-size: 40px;
-    margin: 50px 0;
+    max-width: 456px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    padding: 0 10px;
+  }
+
+  &__text {
+    @include adaptiveValue("font-size", 24, 16);
+    padding: 0 10px;
   }
 
   &__list {

@@ -1,11 +1,14 @@
 .top-brends {
-  padding: 120px 0;
 
   &__list {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     gap: 30px;
+
+    // @include r(1350) {
+    //   flex-direction: column;
+    // }
   }
 
   &__item {
@@ -17,6 +20,11 @@
     border: 1px solid rgb(184 134 11);
     border-radius: 40px;
     box-shadow: inset 3px 3px 20px 5px rgb(184 134 11 / 37%);
+
+    @include r(1350) {
+      flex: 1 1 400px;
+      flex-direction: column;
+    }
   }
 
   &__content {
@@ -37,20 +45,34 @@
   }
 
   &__video-wrapper {
-    max-height: 50vh;
+    height: 65vh;
     position: relative;
     overflow: hidden;
+    margin-top: 40px;
   }
 
   &__video {
-    // width: 100%;
-    // height: 50vh;
     position: absolute;
-    top: 0;
     left: 0;
     right: 0;
-    top: 0;
+    top: -35%;
     max-width: 100%;
   }
 
+  &__topIMG,
+  &__bottomIMG {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
+
+  &__topIMG {
+    top: 0;
+  }
+
+  &__bottomIMG {
+    bottom: -42px;
+    transform: rotateZ(180deg);
+  }
 }
