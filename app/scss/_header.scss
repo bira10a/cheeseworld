@@ -1,6 +1,7 @@
 .header {
   min-height: 100vh;
   position: relative;
+  @include adaptiveValue("margin-bottom", 80, 40);
 
   &__nav {
     display: flex;

@@ -1,29 +1,29 @@
 .top-brends {
+  @include adaptiveValue("margin-bottom", 80, 40);
 
   &__list {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 30px;
-
-    // @include r(1350) {
-    //   flex-direction: column;
-    // }
+    @include adaptiveValue("gap", 30, 10);
   }
 
   &__item {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    width: 48%;
+    flex: 1 1 48%;
     padding: 30px 10px;
     border: 1px solid rgb(184 134 11);
     border-radius: 40px;
     box-shadow: inset 3px 3px 20px 5px rgb(184 134 11 / 37%);
 
     @include r(1350) {
-      flex: 1 1 400px;
       flex-direction: column;
+    }
+
+    @media (max-width:$tablet){
+      padding: 10px 5px;
     }
   }
 
@@ -35,12 +35,27 @@
     text-align: center;
   }
 
+  &__img {
+    @include r(1350) {
+      margin-bottom: 15px;
+    }
+
+    @media (max-width:$tablet){
+      display: none;
+    }
+  }
+
   &__logo {
-    margin-bottom: 30px;
+    @include adaptiveValue("margin-bottom", 30, 15);
+
+    @include r(1350) {
+      height: 90px;
+    }
   }
 
   &__text {
     max-width: 300px;
+    min-width: 260px;
     margin-bottom: 15px;
   }
 
