@@ -444,6 +444,13 @@
 }
 
 .header-nav {
+  &__basketBtn {
+    width: 40px;
+    height: 40px;
+    mask: url('../images/sprite.svg#basket-icon') center / cover no-repeat;
+    background-color: black;
+  }
+
   &__inner {
     position: fixed;
     top: 0;
@@ -595,6 +602,23 @@
   @include r(992) {
     display: block;
     order: 2;
+  }
+}
+
+.basket {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rosybrown;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__descr {
+    max-width: 300px;
   }
 }
 
