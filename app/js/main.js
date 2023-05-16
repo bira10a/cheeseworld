@@ -7,6 +7,7 @@ const burger = document.querySelector('.burger'),
       body = document.querySelector('body'),
       content = document.querySelector('.content');
 
+
 burger.addEventListener('click', () => {
   headerMenu.classList.add('header-nav__inner--active');
 
@@ -55,6 +56,22 @@ headerCheckbox.addEventListener('change', () => {
 })
 
 
+/////////////////////////////////////////
+
+const basket = document.querySelector('.basket'),
+      btnOnBasket = document.querySelector('.header-nav__basketBtn');
+
+btnOnBasket.addEventListener('click', () => {
+  basket.classList.toggle('basket--active');
+});
+
+// document.addEventListener('scroll', () => {
+//   if (basket.classList.contains('basket--active')) {
+//     console.log(document.documentElement.scrollTop);
+//     basket.style.top = document.documentElement.scrollTop + 'px';
+//   }
+// })
+
 
 
 ///////////////////////////////////////// GSAP
@@ -70,10 +87,10 @@ if (ScrollTrigger.isTouch !== 1) {
     effects: true
   })
 
-  gsap.fromTo('.header', { opacity: 1 }, {
+  gsap.fromTo('.top-promo', { opacity: 1 }, {
     opacity: 0,
     scrollTrigger: {
-      trigger: '.header',
+      trigger: '.top-promo',
       start: 'center',
       end: '650',
       scrub: true

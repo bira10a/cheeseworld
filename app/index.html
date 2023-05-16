@@ -16,165 +16,172 @@
 </head>
 <body>
 
+  <div class="header">
+    <div class="header__container">
+      <nav class="header__nav header-nav">
+        <button class="header-nav__basketBtn" type="button" aria-label="открыть корзину товаров"></button>
+        <div class="header-nav__basket basket">
+          <ul class="basket__list">
+            <li class="basket__item">
+              <div class="basket__images">
+                <img class="basket__img" src="images/catalog/catalog-Guten.png" alt="basket" width="150" height="150">
+              </div>
+      
+              <div class="basket__descr">
+                <h3 class="basket__title">title</h3>
+                <div class="basket__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda.</div>
+              </div>
+      
+              <div class="basket__info">
+                <div class="basket__price">249 <span>RUB</span></div>
+      
+                <input type="text">
+              </div>
+            </li>
+          </ul>
+        </div>
+      
+      
+        <form class="header__form">
+          <label>
+            <input class="header__input" name="checkbox-theme" type="checkbox">
+            <span class="header__checkbox" title="Светлая / Тёмная тема"></span>
+          </label>
+        </form>
+      
+        <a class="header__profile" href="#" aria-label="переход в личный кабинет" title="личный кабинет"></a>
+      
+        <button class="header__burger burger" type="button">
+          <span class="burger__line"></span>
+          <span class="sr-only">Открыть меню</span>
+        </button>
+      
+        <div class="header-nav__inner">
+          <ul class="header-nav__menu">
+            <li class="header-nav__item">
+              <a class="header-nav__link" href="#">О заводе</a>
+      
+              <ul class="header-nav__menu-list">
+                <li class="header-nav__menu-item">
+                  <a class="header-nav__menu-link" href="#">Общая информация</a>
+                </li>
+                <li class="header-nav__menu-item">
+                  <a class="header-nav__menu-link" href="#">История</a>
+                </li>
+                <li class="header-nav__menu-item">
+                  <a class="header-nav__menu-link" href="#">Награды</a>
+                </li>
+                <li class="header-nav__menu-item">
+                  <a class="header-nav__menu-link" href="#">Мы в торговых сетях</a>
+                </li>
+                <li class="header-nav__menu-item">
+                  <a class="header-nav__menu-link" href="#">Партнерам</a>
+                </li>
+              </ul>
+            </li>
+      
+            <li class="header-nav__item">
+              <a class="header-nav__link" href="#">Каталог</a>
+      
+              <ul class="header-nav__menu-list">
+                <li class="header-nav__menu-item">
+                  <a class="header-nav__menu-link" href="#">Вся продукция</a>
+                </li>
+                <li class="header-nav__menu-item">
+                  <a class="header-nav__menu-link" href="#">Сыр</a>
+                </li>
+                <li class="header-nav__menu-item">
+                  <a class="header-nav__menu-link" href="#">Масло</a>
+                </li>
+                <li class="header-nav__menu-item">
+                  <a class="header-nav__menu-link" href="#">Цельномолочная продукция</a>
+                </li>
+                <li class="header-nav__menu-item">
+                  <a class="header-nav__menu-link" href="#">Сухая молочная сыворотка</a>
+                </li>
+              </ul>
+            </li>
+      
+            <li class="header-nav__item">
+              <a class="header-nav__link" href="#">Бренды</a>
+      
+              <button class="header-nav__btn" type="button" aria-label="закрыть меню">
+                <span class="header-nav__btn-one"></span>
+                <span class="header-nav__btn-two"></span>
+              </button>
+      
+              <ul class="header-nav__menu-brends">
+                <li class="header-nav__menu-item">
+                  <a class="header-nav__menu-link" href="#">
+                    <img src="images/logo-brend/logo-lattesco.svg" alt="сайт партнёра-бренда Lattesco" width="90" height="80"
+                      loading="lazy">
+                  </a>
+                </li>
+                <li class="header-nav__menu-item">
+                  <a class="header-nav__menu-link" href="#">
+                    <img src="images/logo-brend/logo-emandhof.svg" alt="сайт партнёра-бренда Emandhof" width="100" height="23"
+                      loading="lazy">
+                  </a>
+                </li>
+                <li class="header-nav__menu-item">
+                  <a class="header-nav__menu-link" href="#">
+                    <img src="images/logo-brend/logo.svg" alt="сайт партнёра-бренда Starodub" width="100" height="58"
+                      loading="lazy">
+                  </a>
+                </li>
+                <li class="header-nav__menu-item">
+                  <a class="header-nav__menu-link" href="#">
+                    <img src="images/logo-brend/logo-gutentag.svg" alt="сайт партнёра-бренда Gutentag" width="80" height="80"
+                      loading="lazy">
+                  </a>
+                </li>
+              </ul>
+            </li>
+      
+            <li class="header-nav__item">
+              <a class="header-nav__link" href="#">Новости</a>
+              <a class="header-nav__link" href="#">HoReCa</a>
+              <a class="header-nav__link" href="#">Контакты</a>
+            </li>
+          </ul>
+          <div class="header-nav__borderImg" style="background-image: url('images/border-bg.png');"></div>
+        </div>
+      </nav>
+    </div>
+  </div>
+
   <div class="wrapper">
     <div class="content">
-
-      <header class="header">
-        <div class="header__container">
-          <nav class="header__nav header-nav">
-            <button class="header-nav__basketBtn" type="button" aria-label="открыть корзину товаров"></button>
-            <div class="header-nav__basket basket">
-              <ul class="basket__list">
-                <li class="basket__item">
-                  <div class="basket__images">
-                    <img class="basket__img" src="images/catalog/catalog-Guten.png" alt="basket" width="150" height="150">
-                  </div>
-
-                  <div class="basket__descr">
-                    <h3 class="basket__title">title</h3>
-                    <div class="basket__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda.</div>
-                  </div>
-
-                  <div class="basket__info">
-                    <div class="basket__price">249 <span>RUB</span></div>
-
-                    <input type="text">
-                  </div>
-                </li>
-              </ul>
-            </div>
-
-
-            <form class="header__form">
-              <label>
-                <input class="header__input" name="checkbox-theme" type="checkbox">
-                <span class="header__checkbox" title="Светлая / Тёмная тема"></span>
-              </label>
-            </form>
-
-            <a class="header__profile" href="#" aria-label="переход в личный кабинет" title="личный кабинет"></a>
-    
-            <button class="header__burger burger" type="button">
-              <span class="burger__line"></span>
-              <span class="sr-only">Открыть меню</span>
-            </button>
-    
-            <div class="header-nav__inner">
-              <ul class="header-nav__menu">
-                <li class="header-nav__item">
-                  <a class="header-nav__link" href="#">О заводе</a>
-                  
-                  <ul class="header-nav__menu-list">
-                    <li class="header-nav__menu-item">
-                      <a class="header-nav__menu-link" href="#">Общая информация</a>
-                    </li>
-                    <li class="header-nav__menu-item">
-                      <a class="header-nav__menu-link" href="#">История</a>
-                    </li>
-                    <li class="header-nav__menu-item">
-                      <a class="header-nav__menu-link" href="#">Награды</a>
-                    </li>
-                    <li class="header-nav__menu-item">
-                      <a class="header-nav__menu-link" href="#">Мы в торговых сетях</a>
-                    </li>
-                    <li class="header-nav__menu-item">
-                      <a class="header-nav__menu-link" href="#">Партнерам</a>
-                    </li>
-                  </ul>
-                </li>
-      
-                <li class="header-nav__item">
-                  <a class="header-nav__link" href="#">Каталог</a>
-      
-                  <ul class="header-nav__menu-list">
-                    <li class="header-nav__menu-item">
-                      <a class="header-nav__menu-link" href="#">Вся продукция</a>
-                    </li>
-                    <li class="header-nav__menu-item">
-                      <a class="header-nav__menu-link" href="#">Сыр</a>
-                    </li>
-                    <li class="header-nav__menu-item">
-                      <a class="header-nav__menu-link" href="#">Масло</a>
-                    </li>
-                    <li class="header-nav__menu-item">
-                      <a class="header-nav__menu-link" href="#">Цельномолочная продукция</a>
-                    </li>
-                    <li class="header-nav__menu-item">
-                      <a class="header-nav__menu-link" href="#">Сухая молочная сыворотка</a>
-                    </li>
-                  </ul>
-                </li>
-      
-                <li class="header-nav__item">
-                  <a class="header-nav__link" href="#">Бренды</a>
-    
-                  <button class="header-nav__btn" type="button" aria-label="закрыть меню">
-                    <span class="header-nav__btn-one"></span>
-                    <span class="header-nav__btn-two"></span>
-                  </button>
-    
-                  <ul class="header-nav__menu-brends">
-                    <li class="header-nav__menu-item">
-                      <a class="header-nav__menu-link" href="#">
-                        <img src="images/logo-brend/logo-lattesco.svg" alt="сайт партнёра-бренда Lattesco" width="90" height="80" loading="lazy">
-                      </a>
-                    </li>
-                    <li class="header-nav__menu-item">
-                      <a class="header-nav__menu-link" href="#">
-                        <img src="images/logo-brend/logo-emandhof.svg" alt="сайт партнёра-бренда Emandhof" width="100" height="23" loading="lazy">
-                      </a>
-                    </li>
-                    <li class="header-nav__menu-item">
-                      <a class="header-nav__menu-link" href="#">
-                        <img src="images/logo-brend/logo.svg" alt="сайт партнёра-бренда Starodub" width="100" height="58" loading="lazy">
-                      </a>
-                    </li>
-                    <li class="header-nav__menu-item">
-                      <a class="header-nav__menu-link" href="#">
-                        <img src="images/logo-brend/logo-gutentag.svg" alt="сайт партнёра-бренда Gutentag" width="80" height="80" loading="lazy">
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-      
-                <li class="header-nav__item">
-                  <a class="header-nav__link" href="#">Новости</a>
-                  <a class="header-nav__link" href="#">HoReCa</a>
-                  <a class="header-nav__link" href="#">Контакты</a>
-                </li>
-              </ul>
-              <div class="header-nav__borderImg" style="background-image: url('images/border-bg.png');"></div>
-            </div>
-          </nav>
-    
-          <div class="header__info">
-            <img class="header__logo" src="images/header/logo.svg" alt="logo" loading="lazy" width="326" height="188" data-speed="1.1" loading="lazy">
-            <h1 class="header__title" data-speed="1.2">ТнВ «Сыр Стародубский» <br>— лидер на рынке сыродельных <br>предприятий в России</h1>
-            <a class="header__info-link" href="#" aria-label="ознакомиться с продукцией" data-speed="1.2">
-              <span></span>
-            </a>
-          </div>
-        </div>
-    
-        <div class="header__images">
-          <img class="header__images-one" src="images/header/item1.png" alt="сырная тарелка">
-          <img class="header__images-two" src="images/header/item2.png" alt="вкуснейший сыр">
-          <img class="header__images-three" src="images/header/item3.png" alt="свежий сыр">
-          <img class="header__images-four" src="images/header/item4.png" alt="пармезан">
-          <img class="header__images-five" src="images/header/item5.png" alt="сырное удовольствие">
-          <img class="header__images-six" src="images/header/item6.png" alt="лучшие сыры">
-          <img class="header__images-seven" src="images/header/item7.png" alt="сыр">
-          <img class="header__images-eight" src="images/header/item8.png" alt="сыр">
-          <img class="header__images-nine" src="images/header/item9.png" alt="сыр">
-          <img class="header__images-ten" src="images/header/item10.png" alt="сыр">
-          <img class="header__images-eleven" src="images/header/item11.png" alt="сыр">
-          <img class="header__images-twelve" src="images/header/item12.png" alt="сыр">
-          <img class="header__images-thirteen" src="images/header/item13.png" alt="сыр">
-          <img class="header__images-fourteen" src="images/header/item14.png" alt="сыр">
-        </div>
-      </header>
-      
       <main class="main">
+        <section class="top-promo">
+          <div class="top-promo__container">    
+            <div class="top-promo__info">
+              <img class="top-promo__logo" src="images/header/logo.svg" alt="logo" loading="lazy" width="326" height="188" data-speed="1.1" loading="lazy">
+              <h1 class="top-promo__title" data-speed="1.2">ТнВ «Сыр Стародубский» <br>— лидер на рынке сыродельных <br>предприятий в России</h1>
+              <a class="top-promo__info-link" href="#" aria-label="ознакомиться с продукцией" data-speed="1.2">
+                <span></span>
+              </a>
+            </div>
+          </div>
+      
+          <div class="top-promo__images">
+            <img class="top-promo__images-one" src="images/header/item1.png" alt="сырная тарелка">
+            <img class="top-promo__images-two" src="images/header/item2.png" alt="вкуснейший сыр">
+            <img class="top-promo__images-three" src="images/header/item3.png" alt="свежий сыр">
+            <img class="top-promo__images-four" src="images/header/item4.png" alt="пармезан">
+            <img class="top-promo__images-five" src="images/header/item5.png" alt="сырное удовольствие">
+            <img class="top-promo__images-six" src="images/header/item6.png" alt="лучшие сыры">
+            <img class="top-promo__images-seven" src="images/header/item7.png" alt="сыр">
+            <img class="top-promo__images-eight" src="images/header/item8.png" alt="сыр">
+            <img class="top-promo__images-nine" src="images/header/item9.png" alt="сыр">
+            <img class="top-promo__images-ten" src="images/header/item10.png" alt="сыр">
+            <img class="top-promo__images-eleven" src="images/header/item11.png" alt="сыр">
+            <img class="top-promo__images-twelve" src="images/header/item12.png" alt="сыр">
+            <img class="top-promo__images-thirteen" src="images/header/item13.png" alt="сыр">
+            <img class="top-promo__images-fourteen" src="images/header/item14.png" alt="сыр">
+          </div>
+        </section>
+
         <section class="top-brends">
           <div class="top-brends__container">
             <ul class="top-brends__list">
@@ -422,6 +429,25 @@
               </li>
           
 
+            </ul>
+          </div>
+        </section>
+
+        <section class="basic-goals">
+          <div class="basic-goals__container">
+            <ul class="basic-goals__list">
+              <li class="basic-goals__item">
+                <img src="images/basic-goals/basic-goals_1.png" alt="image" loading="lazy" width="120" height="120">
+                <p>Удовлетворение высоких требований современных потребителей</p>
+              </li>
+              <li class="basic-goals__item">
+                <img src="images/basic-goals/basic-goals_2.png" alt="image" loading="lazy" width="120" height="120">
+                <p>Производство натуральной, высококачественной и экологически чистой молочной продукции</p>
+              </li>
+              <li class="basic-goals__item">
+                <img src="images/basic-goals/basic-goals_3.png" alt="image" loading="lazy" width="120" height="120">
+                <p>Доступные цены</p>
+              </li>
             </ul>
           </div>
         </section>
