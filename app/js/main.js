@@ -73,6 +73,38 @@ btnOnBasket.addEventListener('click', () => {
 // })
 
 
+///////////////////////////////////////// 
+  const headerActive = () => {
+    const sectionTopPromo = document.querySelector('.top-promo');
+    const heightSection = window.getComputedStyle(sectionTopPromo).height.replace(/\D/ig, '');
+    const sectionHeader = document.querySelector('.header');
+    
+
+    document.addEventListener('scroll', () => {
+      // console.log(heightSection.replace(/D/ig, ''));
+
+      if (document.documentElement.scrollTop == heightSection || document.documentElement.scrollTop > heightSection) {
+        sectionHeader.classList.add('header--active')
+      } else {
+        sectionHeader.classList.remove('header--active')
+      }
+    });
+
+  };
+  headerActive();
+
+const sectionTopPromo = document.querySelector('.top-promo');
+  if (window.getComputedStyle(sectionTopPromo).width.replace(/\D/ig, '') >= 900) {
+    console.log(`hello`);
+  } else {
+    console.log(`mini`);
+  }
+
+  console.log(window.getComputedStyle(sectionTopPromo).width.replace(/\D/ig, ''));
+
+  if ('ontouchstart' in window) {
+    console.log(`oe`);
+  }
 
 ///////////////////////////////////////// GSAP
 
