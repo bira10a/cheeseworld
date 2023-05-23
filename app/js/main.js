@@ -93,17 +93,114 @@ btnOnBasket.addEventListener('click', () => {
   };
   headerActive();
 
-const sectionTopPromo = document.querySelector('.top-promo');
-  if (window.getComputedStyle(sectionTopPromo).width.replace(/\D/ig, '') >= 900) {
-    console.log(`hello`);
-  } else {
-    console.log(`mini`);
-  }
-
-  console.log(window.getComputedStyle(sectionTopPromo).width.replace(/\D/ig, ''));
+/////////////////////////////////////////
+//mobile Slider section Assortment
 
   if ('ontouchstart' in window) {
-    console.log(`oe`);
+    const sliderAssortment = () => {
+      const sliderParent = document.querySelector('.assortment__list'),
+            sliders = document.querySelectorAll('.assortment__item');
+
+      let index = 1;
+
+      let offset = 0;
+
+      const prevSliderBtn = document.createElement('button');
+      prevSliderBtn.style.cssText = `
+      display: block; 
+      padding: 20px 60px;
+      margin: 0 auto;
+      background-color: green;
+      color: black;
+      font-size: 24px;
+      `;
+      prevSliderBtn.textContent = 'Назад';
+      sliderParent.after(prevSliderBtn);
+
+      const nextSliderBtn = document.createElement('button');
+      nextSliderBtn.style.cssText = `
+      display: block; 
+      padding: 20px 60px;
+      margin: 0 auto;
+      background-color: green;
+      color: black;
+      font-size: 24px;
+      `;
+      nextSliderBtn.textContent = 'Вперёд';
+      sliderParent.after(nextSliderBtn);
+
+      sliderParent.style.cssText = `
+        justify-content: center;
+        width: auto;  
+      `;
+
+      const wrapper = document.createElement('div');
+      sliderParent.before(wrapper);
+      wrapper.append(sliderParent);
+
+      const width = window.getComputedStyle(wrapper).width;
+
+      wrapper.style.cssText = `
+        overflow: hidden;
+        margin: 0 auto;
+      `;
+
+      sliders.forEach(i => i.style.width = width);
+
+      sliderParent.style.width = 100 * sliders.length + '%'
+      sliderParent.style.transition = 'all 0.4s linear';
+
+      nextSliderBtn.addEventListener('click', () => {
+        if (offset == +width.replace(/\D/ig, '') * (sliders.length - 1)) {
+          offset = 0;
+        } else {
+          offset += +width.replace(/\D/ig, '');
+        }
+        
+        sliderParent.style.transform = `translateX(-${offset}px)`
+      });
+
+      prevSliderBtn.addEventListener('click', () => {
+        if (offset == 0) {
+          offset = +width.replace(/\D/ig, '') * (sliders.length - 1)
+        } else {
+          offset -= +width.replace(/\D/ig, '');
+        }
+        
+        sliderParent.style.transform = `translateX(-${offset}px)`
+      });
+
+
+      setInterval(() => {
+        if (offset == +width.replace(/\D/ig, '') * (sliders.length - 1)) {
+          offset = 0;
+        } else {
+          offset += +width.replace(/\D/ig, '');
+        }
+
+        sliderParent.style.transform = `translateX(-${offset}px)`
+      }, 4000);
+      
+
+      let posX1 = 0,
+          posX2 = 0,
+          posInit = 0,
+          posFinal = 0;
+
+      getEvent = (e) => e.type.search('touch') !== -1 ? e.touches[0] : e,
+
+      function start() {
+        sliderParent.addEventListener('touchstart', (e) => {
+          posX1 = e.clientX;
+          console.log(posX1);
+        });
+      };
+
+      start();
+      
+    };
+
+    sliderAssortment();
   }
 
 ///////////////////////////////////////// GSAP
