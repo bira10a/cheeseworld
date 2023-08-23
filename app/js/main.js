@@ -181,22 +181,25 @@ btnOnBasket.addEventListener('click', () => {
         sliderParent.style.transform = `translateX(-${offset}px)`
       }, 4000);
       
+      
+      sliderParent.addEventListener('wheel', (e) => {
+        if (e.target == sliderParent) {
+          document.querySelector('body').style.overflow = `hidden`;
+        } else {
+          document.querySelector('body').style.overflow = '';
+        }
 
-      let posX1 = 0,
-          posX2 = 0,
-          posInit = 0,
-          posFinal = 0;
+        console.log(e.target.sliderParent);
 
-      getEvent = (e) => e.type.search('touch') !== -1 ? e.touches[0] : e,
+        if (offset == +width.replace(/\D/ig, '') * (sliders.length - 1)) {
+          offset = 0;
+        } else {
+          offset += +width.replace(/\D/ig, '');
+        }
 
-      function start() {
-        sliderParent.addEventListener('touchstart', (e) => {
-          posX1 = e.clientX;
-          console.log(posX1);
-        });
-      };
+        sliderParent.style.transform = `translateX(-${offset}px)`
+      });
 
-      start();
       
     };
 
