@@ -1,3 +1,71 @@
 .contact-us {
-  
+  &__wrapper {
+    background-color: $default;
+    text-align: center;
+    @include adaptiveValue("padding", 80, 20);
+  }
+
+  &__text {
+    @include adaptiveValue("margin-bottom", 30, 15);
+  }
+
+  &__form {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+
+    @include r(1250) {
+      flex-direction: column;
+      gap: 30px;
+    }
+  }
+
+  &__item {
+    width: 100%;
+    position: relative;
+  }
+
+  &__label {
+    position: absolute;
+    top: 10px;
+    left: 45px;
+    transition: top linear 0.3s, left linear 0.3s, font-size linear 0.3s, opacity linear 0.3s;
+  }
+
+  &__input {
+    z-index: 2;
+    position: relative;
+    outline: transparent;
+    border-bottom: 1px solid #777676;
+    padding: 10px;
+    transition: all linear 0.3s;
+
+    &:focus {
+      & ~ label {
+        top: -10px;
+        left: 10px;
+        font-size: 12px;
+        opacity: 0.7;
+      }
+    }
+
+    &:hover {
+      border-color: $accent;
+    }
+
+    @include r(1250) {
+      max-width: 400px;
+      width: 100%;
+    }
+  }
+
+  &__input--focus {
+    & ~ label {
+      top: -10px;
+      left: 10px;
+      font-size: 12px;
+      opacity: 0.7;
+    }
+  }
 }
