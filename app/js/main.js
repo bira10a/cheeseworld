@@ -296,8 +296,23 @@ if (ScrollTrigger.isTouch !== 1) {
 
   const contactForm = () => {
     const input = document.querySelectorAll('.contact-us__input'),
-          spanText = document.querySelectorAll('.contact-us__label');
+          spanText = document.querySelectorAll('.contact-us__label'),
+          form = document.querySelector('.contact-us__form');
 
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      input.forEach(i => {
+        if (i.classList.contains('.contact-us__input--erorr')) {
+          console.log('wooo');
+        } else {
+          console.log(i.classList.contains('.contact-us__input--erorr'));
+        }
+      });
+
+      
+    });
+    
     input.forEach(i => {
       i.addEventListener('input', () => {
         if (i.value != '') {
@@ -308,14 +323,8 @@ if (ScrollTrigger.isTouch !== 1) {
 
         if (i.value.match(/\d/g) && i.getAttribute('name') != 'phone') {
           i.classList.add('contact-us__input--erorr');
-          spanText.forEach(i => {
-          i.textContent = 'Введите корректные значения';
-          });
           i.style.borderColor = 'red';
         } else {
-          spanText.forEach(i => {
-            i.textContent = '';
-          });
           i.style.borderColor = '';
         }
       });
