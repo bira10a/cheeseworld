@@ -1,0 +1,35 @@
+@font-face {
+  font-family: 'AnonymousPro';
+  font-weight: 400;
+  font-style: normal;
+  src: url('../fonts/AnonymousPro-Regular.woff2') format('woff2'),
+       url('../fonts/AnonymousPro-Regular.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Play';
+  font-weight: 400;
+  font-style: normal;
+  src: url('../fonts/Play-Regular.woff2') format('woff2'),
+       url('../fonts/Play-Regular.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Play';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/Play-Bold.woff2') format('woff2'),
+       url('../fonts/Play-Bold.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'RubikMoonrocks';
+  font-weight: 400;
+  font-style: normal;
+  src: url('../fonts/RubikMoonrocks-Regular.woff2') format('woff2'),
+       url('../fonts/RubikMoonrocks-Regular.woff') format('woff');
+  font-display: swap;
+}
