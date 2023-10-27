@@ -1,22 +1,30 @@
 .top-brends {
-  padding: 120px 0;
+  @include adaptiveValue("margin-bottom", 80, 40);
 
   &__list {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 30px;
+    @include adaptiveValue("gap", 30, 10);
   }
 
   &__item {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    width: 48%;
+    flex: 1 1 48%;
     padding: 30px 10px;
     border: 1px solid rgb(184 134 11);
     border-radius: 40px;
     box-shadow: inset 3px 3px 20px 5px rgb(184 134 11 / 37%);
+
+    @include r(1350) {
+      flex-direction: column;
+    }
+
+    @media (max-width:$tablet){
+      padding: 10px 5px;
+    }
   }
 
   &__content {
@@ -27,30 +35,70 @@
     text-align: center;
   }
 
+  &__img {
+    @include r(1350) {
+      margin-bottom: 15px;
+    }
+
+    @media (max-width:$tablet){
+      display: none;
+    }
+  }
+
   &__logo {
-    margin-bottom: 30px;
+    @include adaptiveValue("margin-bottom", 30, 15);
+
+    @include r(1350) {
+      height: 90px;
+    }
   }
 
   &__text {
     max-width: 300px;
+    min-width: 260px;
     margin-bottom: 15px;
   }
 
   &__video-wrapper {
-    max-height: 50vh;
+    height: 100vh;
+    max-height: 650px;
     position: relative;
     overflow: hidden;
+    margin-top: 40px;
+
+    @media (max-width:$tablet){
+      max-height: 450px;
+    }
   }
 
   &__video {
-    // width: 100%;
-    // height: 50vh;
     position: absolute;
-    top: 0;
     left: 0;
     right: 0;
-    top: 0;
+    top: 0%;
     max-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
+  &__topIMG,
+  &__bottomIMG {
+    @extend %bg-img;
+    width: 100%;
+    @include adaptiveValue("height", 100, 70);
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
+
+  &__topIMG {
+    top: 0;
+  }
+
+  &__bottomIMG {
+    bottom: -10px;
+    transform: rotateZ(180deg);
+  }
 }
