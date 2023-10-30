@@ -88,8 +88,8 @@ $responsiveType: 1;
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 300;
+  font-family: 'Play', sans-serif;
+  font-weight: 400;
   font-size: 16px;
   line-height: 1.4;
   color: $default;
@@ -113,12 +113,6 @@ body {
 
 .main {
   flex-grow: 1;
-}
-
-.container {
-  // max-width: 1320px;
-  // margin: 0 auto;
-  // padding: 0 15px;
 }
 
 .btn {
@@ -168,14 +162,9 @@ body {
 }
 
 .title {
-  // @extend %ruda-600;
-  // line-height: 1.4;
-  // letter-spacing: 0.03em;
-  // color: $dark-900;
-  // text-align: center;
-  // margin-bottom: 30px;
-  // padding-top: 72px;
-  // text-transform: uppercase;
+  font-family: 'Play', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.03em;
   text-wrap: balance;
   @include adaptiveValue("font-size", 40, 26);
   margin-bottom: 20px;
