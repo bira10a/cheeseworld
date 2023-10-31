@@ -4,6 +4,20 @@
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     @include adaptiveValue("column-gap", 40, 15);
     @include adaptiveValue("row-gap", 30, 20);
+
+    .new__wrapper {
+      transition: all 0.3s linear;
+    }
+
+    .show {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .hide {
+      opacity: 0;
+      visibility: hidden;
+    }
   }
 
   li {

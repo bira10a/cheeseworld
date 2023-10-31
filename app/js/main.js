@@ -361,4 +361,30 @@ if (ScrollTrigger.isTouch !== 1) {
   };
   contactForm();
 
+////////////////////////////////////////////////
+  const Spoiler = () => {
+    const btn = document.querySelectorAll('.new__text'),
+          text = document.querySelectorAll('.new__wrapper');
+
+    const showText = (n = 1) => {
+      text.forEach(text => {
+        text.classList.add('hide');
+        text.classList.remove('show');
+      });
+
+      text[n].classList.add('show');
+      text[n].classList.remove('hide');
+    };
+
+    showText();
+
+    btn.forEach((i, num) => {
+      i.addEventListener('click', () => {
+        showText(num);
+      });
+    });
+  };
+
+  Spoiler();
+
 }
