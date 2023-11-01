@@ -363,8 +363,8 @@ if (ScrollTrigger.isTouch !== 1) {
 
 ////////////////////////////////////////////////
   const Spoiler = () => {
-    const btn = document.querySelectorAll('.new__text'),
-          text = document.querySelectorAll('.new__wrapper');
+    const btn = document.querySelectorAll('.news__text'),
+          text = document.querySelectorAll('.news__wrapper');
 
     const showText = (n = 1) => {
       text.forEach(text => {
@@ -385,6 +385,6 @@ if (ScrollTrigger.isTouch !== 1) {
     });
   };
 
-  Spoiler();
+  // Spoiler();
 
 }
