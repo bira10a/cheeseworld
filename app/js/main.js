@@ -387,4 +387,11 @@ if (ScrollTrigger.isTouch !== 1) {
 
   // Spoiler();
 
+///////////////////////////////////////
+  const footerCopy = () => {
+    const footerCopy = document.querySelector('.footer__copy span')
+    footerCopy.textContent = `${new Date().getFullYear()}`;
+  };
+  footerCopy();
+
 }
