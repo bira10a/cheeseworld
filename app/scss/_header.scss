@@ -192,6 +192,17 @@
     font-size: 24px;
     color: $accent;
     margin-bottom: 30px;
+    outline: transparent;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s linear, color 0.2s linear;
+
+    &:hover {
+      color: $chese;
+    }
+
+    &:focus {
+      border-color: currentColor;
+    }
 
     @media (max-width:$mobile){
        margin-bottom: 15px; 
@@ -208,6 +219,50 @@
 
     &:last-child {
       margin-bottom: 0;
+    }
+  }
+
+  &__menu-link {
+    position: relative;
+    outline: transparent;
+    transition: color 0.2s linear;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 0;
+        height: 1px;
+        background-color: $accent;
+        transition: width 0.4s linear;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -5px;
+        right: -5px;
+        bottom: 0;
+        border: 1px solid transparent;
+        transition: border-color 0.2s linear;
+    }
+    
+    &:focus {
+        &::before {
+            border-color: $accent;
+            border-bottom-color: transparent;
+            border-top-color: transparent;
+        }
+    }
+
+    &:hover {
+        color: $accent;
+
+        &::after {
+            width: 100%;
+        }
     }
   }
 
