@@ -5,6 +5,13 @@
     background-color: $default;
     text-align: center;
     @include adaptiveValue("padding", 80, 20);
+
+    .black-theme & {
+      background-color: transparent;
+      border: 1px solid #b8860b;
+      border-radius: 40px;
+      box-shadow: inset 3px 3px 20px 5px rgba(184,134,11,.37);
+    }
   }
 
   &__text {
@@ -48,6 +55,15 @@
     border-bottom: 1px solid #777676;
     padding: 10px;
     transition: all linear 0.3s;
+
+    &::placeholder {
+      transition: color 0.3s linear;
+      color: #333333;
+    }
+
+    .black-theme &::placeholder {
+      color: #fff0bd;
+    }
 
     &:focus {
       & ~ label {
