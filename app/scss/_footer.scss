@@ -4,7 +4,7 @@
     transition: all 0.2s linear;
 
     .black-theme & {
-        background-color: black;
+        background-color: $dark-background;
         box-shadow: inset 3px 3px 20px 5px rgba(184,134,11,.37);
         border: 1px solid #b8860b;
         border-radius: 40px;

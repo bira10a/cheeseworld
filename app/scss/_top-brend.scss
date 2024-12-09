@@ -48,6 +48,11 @@
   &__logo {
     @include adaptiveValue("margin-bottom", 30, 15);
 
+    &--lattesco {
+      background-color: $white;
+      border-radius: 50%;
+    }
+
     @include r(1350) {
       height: 90px;
     }
@@ -63,7 +68,6 @@
     height: 100vh;
     max-height: 650px;
     position: relative;
-    overflow: hidden;
     margin-top: 40px;
 
     @media (max-width:$tablet){
@@ -91,10 +95,14 @@
     left: 0;
     right: 0;
     z-index: 1;
+
+    .black-theme & {
+      display: none;
+    }
   }
 
   &__topIMG {
-    top: 0;
+    top: -2px;
   }
 
   &__bottomIMG {

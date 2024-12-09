@@ -9,6 +9,7 @@ const browserSync = require('browser-sync').create();
 const svgSprite = require('gulp-svg-sprite');
 const fonter = require('gulp-fonter');
 const ttf2woff2 = require('gulp-ttf2woff2');
+const webpack = require('webpack-stream');
 
 
 function fonts() {
@@ -63,6 +64,7 @@ function scripts() {
   return src([
     'app/js/main.js'
   ])
+  .pipe(webpack())
   .pipe(concat('main.min.js'))
   .pipe(uglify())
   .pipe(dest('app/js'))

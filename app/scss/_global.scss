@@ -92,16 +92,13 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.4;
-  color: $default;
-  color: #333;
-  background-color: #ffffff;
   display: flex;
   flex-direction: column;
   transition: all 0.3s linear;
+  @include theme-colors($light-theme: true);
 
   &.black-theme {
-    background-color: #000;
-    color: #fff0bd;
+    @include theme-colors($light-theme: false);
   }
 }
 

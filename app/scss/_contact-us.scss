@@ -61,10 +61,6 @@
       color: #333333;
     }
 
-    .black-theme &::placeholder {
-      color: #fff0bd;
-    }
-
     &:focus {
       & ~ label {
         top: -10px;
