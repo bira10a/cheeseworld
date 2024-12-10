@@ -1,57 +1,21 @@
 import BurgerMenu from "./components/burger";
+import {headerActive, handleCheckbox} from "./components/headerChange";
+import { foodBasket } from "./components/foodBasket";
+
+import { getProduct } from "./components/data";
+import { products } from "./components/products";
 
 BurgerMenu();
+headerActive();
+handleCheckbox();
+foodBasket();
 
-/////////////////////////////////////////
-const headerCheckbox = document.querySelector('.header__input'),
-      body = document.querySelector('body');
-
-headerCheckbox.addEventListener('change', () => {
-  if (headerCheckbox.checked) {
-    body.classList.add('black-theme');
-  } else {
-    body.classList.remove('black-theme');
-  }
-
-})
+products();
 
 
 /////////////////////////////////////////
 
-const basket = document.querySelector('.basket'),
-      btnOnBasket = document.querySelector('.header-nav__basketBtn');
 
-btnOnBasket.addEventListener('click', () => {
-  basket.classList.toggle('basket--active');
-});
-
-// document.addEventListener('scroll', () => {
-//   if (basket.classList.contains('basket--active')) {
-//     console.log(document.documentElement.scrollTop);
-//     basket.style.top = document.documentElement.scrollTop + 'px';
-//   }
-// })
-
-
-///////////////////////////////////////// 
-  const headerActive = () => {
-    const sectionTopPromo = document.querySelector('.top-promo');
-    const heightSection = window.getComputedStyle(sectionTopPromo).height.replace(/\D/ig, '');
-    const sectionHeader = document.querySelector('.header');
-    
-
-    document.addEventListener('scroll', () => {
-      // console.log(heightSection.replace(/D/ig, ''));
-
-      if (document.documentElement.scrollTop == heightSection || document.documentElement.scrollTop > heightSection) {
-        sectionHeader.classList.add('header--active')
-      } else {
-        sectionHeader.classList.remove('header--active')
-      }
-    });
-
-  };
-  headerActive();
 
 /////////////////////////////////////////
 //mobile Slider section Assortment
