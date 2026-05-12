@@ -5,12 +5,16 @@ import { foodBasket } from "./components/foodBasket";
 import { getProduct } from "./components/data";
 import { products } from "./components/products";
 
+import {form} from "./components/form";
+
 BurgerMenu();
 headerActive();
 handleCheckbox();
 foodBasket();
 
-products();
+// products();
+
+form();
 
 
 /////////////////////////////////////////
